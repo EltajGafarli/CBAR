@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20241207-3
+      author: Eltaj Gafarli
+      changes:
+        - sql:
+            sql: insert into currency(code, name, nominal, value) values ('AZN', 'Azərbaycan manatı', 1, 1.0000)

@@ -1,0 +1,76 @@
+/* CurrencyConverter.css */
+
+body {
+    appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="white" stroke-width="1.5" d="M1 1l4 4-4 4"/></svg>');
+    background-repeat: no-repeat;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="white" stroke-width="1.5" d="M1 1l4 4-4 4"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    scroll-snap-type: none;
+    scrollbar-width: 0px;
+    color: #fff;
+}
+
+select::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.currency-converter {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.converter-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.converter-row input,
+.converter-row select {
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #444;
+    color: #fff;
+}
+
+.converter-row .arrow {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    margin-top: 10px;
+    color: #ff0000;
+}

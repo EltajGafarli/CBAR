@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet: 
+      id: 20241207-2
+      author: Eltaj Gafarli
+      changes:
+        - createTable:
+            tableName: operations
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: operation_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false

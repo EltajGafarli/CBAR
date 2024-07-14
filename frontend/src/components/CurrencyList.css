@@ -1,0 +1,55 @@
+/* CurrencyList.css */
+
+body {
+    appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="white" stroke-width="1.5" d="M1 1l4 4-4 4"/></svg>');
+    background-repeat: no-repeat;
+}
+
+.app-container {
+    appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="none" stroke="white" stroke-width="1.5" d="M1 1l4 4-4 4"/></svg>');
+    background-repeat: no-repeat;
+}
+
+.currency-list {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #444;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background: #555;
+}
+
+tr:nth-child(even) {
+    background: #444;
+}
+
+tr:nth-child(odd) {
+    background: #555;
+}

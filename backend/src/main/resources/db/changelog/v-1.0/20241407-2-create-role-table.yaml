@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20241407-1
+      author: Eltaj Gafarli
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: role_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+
+        - addForeignKeyConstraint:
+            baseTableName: roles
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: id
+            onDelete: CASCADE
+            constraintName: FK_ROLE_USER
+            onUpdate: CASCADE
+
+        - addUniqueConstraint:
+            tableName: roles
+            columnNames: role
+            constraintName: uq_role
+
+        - createIndex:
+            tableName: roles
+            indexName: idx_role_user_id
+            columns:
+              - column:
+                  name: user_id
